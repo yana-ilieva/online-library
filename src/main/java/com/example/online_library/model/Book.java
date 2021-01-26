@@ -18,6 +18,9 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
+    private Long inventoryNumber;
+
     @Column(nullable = false)
     private String title;
 

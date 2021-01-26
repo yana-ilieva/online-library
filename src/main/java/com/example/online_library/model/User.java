@@ -37,6 +37,5 @@ public class User {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @ManyToOne
-    @Column(nullable = false)
     private Role role;
 }
