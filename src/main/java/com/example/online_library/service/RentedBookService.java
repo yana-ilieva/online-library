@@ -1,5 +1,4 @@
 package com.example.online_library.service;
 
-public interface BookService {
-
+public interface RentedBookService {
 }
