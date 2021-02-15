@@ -1,11 +1,9 @@
 package com.example.online_library.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,4 +19,9 @@ public class Publisher {
 
     @Column(nullable = false, unique = true)
     private String name;
+
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "publisher")
+    private Set<Book> books;
 }

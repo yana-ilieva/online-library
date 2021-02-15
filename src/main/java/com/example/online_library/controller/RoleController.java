@@ -32,7 +32,7 @@ public class RoleController {
         return ResponseEntity.ok(roleService.findById(id));
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/name/{name}")
     public ResponseEntity<RoleDto> findByName(@PathVariable String name){
         return ResponseEntity.ok(roleService.findByName(name));
     }
