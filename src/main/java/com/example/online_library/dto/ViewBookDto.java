@@ -14,6 +14,8 @@ import java.util.Set;
 @Data
 public class ViewBookDto {
 
+    private Long id;
+
     private Long inventoryNumber;
 
     private String title;
